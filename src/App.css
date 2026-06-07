@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+.fraunces-tt {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "SOFT" 0,
+    "WONK" 0;
+}
+
+
+.inter-tt {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
