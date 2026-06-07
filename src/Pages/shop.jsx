@@ -55,13 +55,13 @@ const Shop = () => {
             {/* Product Cards Component */}
             <div className="w-full flex justify-center py-16">
                 <div className={`w-[65%] grid gap-x-4 gap-y-10 justify-center place-items-center transition-all duration-500 ${getGridClass()}`}>
-                    <PD />
-                    <PD />
-                    <PD />
-                    <PD />
-                    <PD />
-                    <PD />
-                    <PD />
+                    <PD name="Premium Mustard Oil" price="₹350" />
+                    <PD name="Groundnut Oil" price="₹450" />
+                    <PD name="White Sesame Oil" price="₹550" />
+                    <PD name="Coconut Oil" price="₹400" />
+                    <PD name="Flaxseed Oil" price="₹600" />
+                    <PD name="Almond Oil" price="₹1200" />
+                    <PD name="Black Sesame Oil" price="₹650" />
                 </div>
             </div>
 

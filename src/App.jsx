@@ -8,6 +8,7 @@ import Heritage from './Pages/heritage'
 import Footer from './Components/footer'
 import Contact from './Pages/contact'
 import CustomCursor from './Components/CustomCursor'
+import Shopping from './Pages/shopping'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/heritage" element={<Heritage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/shopping" element={<Shopping />} />
       </Routes>
       <Footer />
     </>

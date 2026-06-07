@@ -30,10 +30,10 @@ const Home = () => {
                 <p className='inter-tt text-xs font-normal tracking-widest'>our process</p>
                 <h2 className='fraunces-tt font-semibold text-[48px]'>A small range. Pressed <br></br> with great care.</h2>
                 <div className='w-full flex gap-4 pt-8 pb-13'>
-                    <PD />
-                    <PD />
-                    <PD />
-                    <PD />
+                    <PD name="Premium Mustard Oil" price="₹350" />
+                    <PD name="Groundnut Oil" price="₹450" />
+                    <PD name="White Sesame Oil" price="₹550" />
+                    <PD name="Coconut Oil" price="₹400" />
                     <Link to="/shop" className='self-center w-48 h-16 bg-gray-900 text-white rounded-full flex items-center justify-center gap-2 hover:scale-110 hover:bg-[#ce6400] transition-all duration-300 shadow-lg cursor-pointer mx-3'>
                         <span className="inter-tt text-xs tracking-widest uppercase font-bold pt-1">See More</span>
                         <MoveUpRight size={20} />
