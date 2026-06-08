@@ -11,9 +11,14 @@ const CustomCursor = () => {
         const xTo = gsap.quickTo(cursor, "x", { duration: 0.5, ease: "power3.out" });
         const yTo = gsap.quickTo(cursor, "y", { duration: 0.5, ease: "power3.out" });
 
+        // Only track if screen is desktop width
+        const mediaQuery = window.matchMedia("(min-width: 768px)");
+
         const onMouseMove = (e) => {
-            xTo(e.clientX);
-            yTo(e.clientY);
+            if (mediaQuery.matches) {
+                xTo(e.clientX);
+                yTo(e.clientY);
+            }
         };
 
         window.addEventListener("mousemove", onMouseMove);
@@ -26,7 +31,7 @@ const CustomCursor = () => {
     return (
         <div
             ref={cursorRef}
-            className="fixed top-0 left-0 w-12 h-12 border-2 border-[#ce6400] bg-transparent rounded-full pointer-events-none z-10000 -ml-6 -mt-6"
+            className="hidden md:block fixed top-0 left-0 w-12 h-12 border-2 border-[#ce6400] bg-transparent rounded-full pointer-events-none z-10000 -ml-6 -mt-6"
         />
     );
 };

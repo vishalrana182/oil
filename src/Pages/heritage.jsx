@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import bull from '../assets/heritage-bull-TkP4esK2.jpg';
 
 const Heritage = () => {
+    const [imageLoaded, setImageLoaded] = useState(false);
+
     return (
         <div className="min-h-screen bg-[#F9F2E6] text-gray-900">
             {/* Header Area to match shop page */}
@@ -31,8 +33,17 @@ const Heritage = () => {
                     <p>The cleanest oil starts with the cleanest seed. We audit every step — from farmer to filter — and we'd rather skip a press day than ship a bottle we wouldn't pour for our own children.</p>
                 </div>
 
-                <div className="aspect-square overflow-hidden rounded-xl my-16 shadow-2xl">
-                    <img src="https://design-to-go-store.lovable.app/assets/seeds-flatlay-D252FKRk.jpg" alt="Hand-picked white sesame, peanut, flax, and mustard seeds" loading="lazy" className="w-full h-full object-cover" />
+                <div className="aspect-square overflow-hidden rounded-xl my-16 shadow-2xl relative bg-gray-200/50">
+                    {!imageLoaded && (
+                        <div className="absolute inset-0 bg-[#d4c5ae]/30 animate-pulse z-10"></div>
+                    )}
+                    <img 
+                        src="https://design-to-go-store.lovable.app/assets/seeds-flatlay-D252FKRk.jpg" 
+                        alt="Hand-picked white sesame, peanut, flax, and mustard seeds" 
+                        loading="lazy" 
+                        className={`w-full h-full object-cover transition-opacity duration-1000 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`} 
+                        onLoad={() => setImageLoaded(true)}
+                    />
                 </div>
 
                 <div className="space-y-6 text-gray-700 text-lg leading-relaxed inter-tt">

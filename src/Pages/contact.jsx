@@ -62,7 +62,7 @@ const Contact = () => {
                 </div>
 
                 {/* Right Side - SVG */}
-                <div className="w-full md:w-1/2 flex justify-center p-10">
+                <div className="hidden md:flex w-full md:w-1/2 justify-center p-10">
                     <img src={contactSvg} alt="Contact Us" className="w-full max-w-lg drop-shadow-2xl" />
                 </div>
 
